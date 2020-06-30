@@ -1,0 +1,93 @@
+.wrapper{
+  position: absolute;
+  top:30%;
+  left:50%;
+  transform: translate(-50%, 50%);
+}
+
+body {
+  background: #292b30; /*Ebon*/
+}
+
+
+.eyeToggle input[type="checkbox"] {
+  opacity: 0;
+}
+
+.toggle {
+  position: relative;
+  background-color: #EEBEAE;
+  width: 8em;
+  height: 4.25em;
+  border-radius: 2.125em;
+  line-height: 4.125em;
+  padding: 0 0.3125em;
+  box-shadow: inset 0 0.0625em 0.0625em 0.0625em rgba(0, 0, 0, 0.5), inset 0 0.125em 0 0.0625em black;
+  transition: .3s;
+ 
+}
+.toggle:hover{
+  background-color: #D0AB98;
+}
+
+.eye {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: linear-gradient(to bottom, #D0AB98, #ffffff);
+  box-shadow: 0 0.125em 0.1875em 0 black, inset 0 0 0.1875em 0.1875em rgba(24, 108, 172, 0.5);
+  border-radius: 50%;
+  width: 3.625em;
+  height: 3.625em;
+  position: relative;
+  transition: .3s;
+  overflow: hidden;
+}
+
+.eye .pupil {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 0.625em;
+  width: 0.625em;
+  margin-top: -0.3125em;
+  margin-left: -0.3125em;
+  border-radius: 50%;
+  background-color: #000;
+  box-shadow: inset -0.0625em -0.0625em 0.125em 0.0625em rgba(24, 108, 172, 0.5);
+  background-image: radial-gradient(ellipse at 40% 40%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
+}
+
+.eye .topLid {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  margin-left: -100%;
+  height: 1.875em;
+  background-color: #2D1A15;
+  z-index: 1;
+  transition: .7s ease-out;
+  border-radius: 50% 50% 90% 90%;
+}
+
+.eyeToggle input[type="checkbox"]:checked + .toggle {
+  background-color:  #3394FF;
+}
+
+.eyeToggle input[type="checkbox"]:checked + .toggle:hover, .eyeToggle input[type="checkbox"]:checked + .toggle:active {
+  background-color: #3385FF;
+}
+
+.eyeToggle input[type="checkbox"]:checked + .toggle .eye .topLid, .eyeToggle input[type="checkbox"]:checked + .toggle .eye .bottomLid {
+  height: 0;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.eyeToggle input[type="checkbox"]:checked + .toggle .eye {
+  transform: translate(4.35em, 0);
+}
+
+/*HTML & CSS, both are done!,   Thanks For Watching!*/
